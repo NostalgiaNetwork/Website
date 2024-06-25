@@ -57,13 +57,25 @@
         .button:hover {
             background: #c0392b;
         }
+        .language-selector {
+            margin-top: 20px;
+            background: rgba(44, 62, 80, 0.85);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .dropdown {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Nostalgia Network</h1>
         <h2>Current Version: 1.18.2</h2>
-        <h2>Current ModPack: Stoneblock 3 - Latest</h2>
+        <h2>Current ModPack: StoneBlock 3 - Latest</h2>
         
         <p>
             Experience survival like never before with a variety of mods that enhance gameplay, add new features, and bring more excitement to your Minecraft adventure. Join a community of like-minded players who share your passion for Minecraft. Participate in events, collaborate on builds, and make new friends.
@@ -79,13 +91,91 @@
         </div>
         <div class="news">
             <h2>News</h2>
-            <p>Opened New Survival Server Modded with 1.20.1</p>
+            <p>Opened New Survival Server Modded with 1.18.2</p>
         </div>
         <h2>Join Us:</h2>
         <p>Server IP: <strong>NostalgiaNetworkSurv.exaroton.me</strong></p>
         <a href="https://discord.gg/hC4yBAFVEC" class="button">Join our Discord</a>
     </div>
+    <div class="language-selector">
+        <label for="language">Change Language:</label>
+        <select id="language" class="dropdown">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="pl">Polski</option>
+        </select>
+    </div>
+
+    <script>
+        const texts = {
+            en: {
+                welcome: "Welcome to Nostalgia Network",
+                version: "Current Version: 1.18.2",
+                modpack: "Current ModPack: StoneBlock 3 - Latest",
+                experience: "Experience survival like never before with a variety of mods that enhance gameplay, add new features, and bring more excitement to your Minecraft adventure. Join a community of like-minded players who share your passion for Minecraft. Participate in events, collaborate on builds, and make new friends.",
+                update: "Our server is always updated to provide you with the best and most secure gaming experience. We ensure all features and mods are compatible and optimized for this version.",
+                featuresTitle: "Features",
+                feature1: "Modded Survival: Experience survival like never before with a variety of mods that enhance gameplay, add new features, and bring more excitement to your Minecraft adventure.",
+                feature2: "Community Focused: Join a community of like-minded players who share your passion for Minecraft. Participate in events, collaborate on builds, and make new friends.",
+                feature3: "Regular Updates: We continuously add new mods and updates to keep the gameplay fresh and engaging.",
+                newsTitle: "News",
+                newsContent: "Opened New Survival Server Modded with 1.18.2",
+                joinUs: "Join Us:",
+                serverIP: "Server IP: NostalgiaNetworkSurv.exaroton.me",
+                joinDiscord: "Join our Discord"
+            },
+            fr: {
+                welcome: "Bienvenue sur Nostalgia Network",
+                version: "Version actuelle : 1.18.2",
+                modpack: "ModPack actuel : StoneBlock 3 - Dernière version",
+                experience: "Découvrez la survie comme jamais auparavant avec une variété de mods qui améliorent le gameplay, ajoutent de nouvelles fonctionnalités et apportent plus d'excitation à votre aventure Minecraft. Rejoignez une communauté de joueurs partageant les mêmes idées et votre passion pour Minecraft. Participez à des événements, collaborez sur des constructions et faites-vous de nouveaux amis.",
+                update: "Notre serveur est toujours à jour pour vous offrir la meilleure expérience de jeu et la plus sécurisée. Nous veillons à ce que toutes les fonctionnalités et les mods soient compatibles et optimisés pour cette version.",
+                featuresTitle: "Fonctionnalités",
+                feature1: "Survie Moddée : Découvrez la survie comme jamais auparavant avec une variété de mods qui améliorent le gameplay, ajoutent de nouvelles fonctionnalités et apportent plus d'excitation à votre aventure Minecraft.",
+                feature2: "Axé sur la communauté : Rejoignez une communauté de joueurs partageant les mêmes idées et votre passion pour Minecraft. Participez à des événements, collaborez sur des constructions et faites-vous de nouveaux amis.",
+                feature3: "Mises à jour régulières : Nous ajoutons continuellement de nouveaux mods et des mises à jour pour garder le gameplay frais et engageant.",
+                newsTitle: "Actualités",
+                newsContent: "Ouverture d'un nouveau serveur de survie moddé avec la version 1.18.2",
+                joinUs: "Rejoignez-nous :",
+                serverIP: "IP du serveur : NostalgiaNetworkSurv.exaroton.me",
+                joinDiscord: "Rejoignez notre Discord"
+            },
+            pl: {
+                welcome: "Witamy na Nostalgia Network",
+                version: "Obecna wersja: 1.18.2",
+                modpack: "Obecny ModPack: StoneBlock 3 - Najnowszy",
+                experience: "Doświadcz przetrwania jak nigdy dotąd dzięki różnorodnym modyfikacjom, które poprawiają rozgrywkę, dodają nowe funkcje i wnoszą więcej emocji do Twojej przygody w Minecraft. Dołącz do społeczności osób o podobnych zainteresowaniach, które podzielają Twoją pasję do Minecraft. Uczestnicz w wydarzeniach, współpracuj przy budowlach i poznawaj nowych przyjaciół.",
+                update: "Nasz serwer jest zawsze aktualizowany, aby zapewnić Ci najlepsze i najbezpieczniejsze wrażenia z gry. Dbamy o to, aby wszystkie funkcje i mody były kompatybilne i zoptymalizowane dla tej wersji.",
+                featuresTitle: "Funkcje",
+                feature1: "Modded Survival: Doświadcz przetrwania jak nigdy dotąd dzięki różnorodnym modyfikacjom, które poprawiają rozgrywkę, dodają nowe funkcje i wnoszą więcej emocji do Twojej przygody w Minecraft.",
+                feature2: "Skupienie na społeczności: Dołącz do społeczności osób o podobnych zainteresowaniach, które podzielają Twoją pasję do Minecraft. Uczestnicz w wydarzeniach, współpracuj przy budowlach i poznawaj nowych przyjaciół.",
+                feature3: "Regularne aktualizacje: Ciągle dodajemy nowe modyfikacje i aktualizacje, aby gra była świeża i angażująca.",
+                newsTitle: "Aktualności",
+                newsContent: "Otwarto nowy serwer przetrwania z modyfikacjami w wersji 1.18.2",
+                joinUs: "Dołącz do nas:",
+                serverIP: "IP serwera: NostalgiaNetworkSurv.exaroton.me",
+                joinDiscord: "Dołącz do naszego Discorda"
+            }
+        };
+
+        document.getElementById('language').addEventListener('change', function() {
+            const selectedLanguage = this.value;
+            const content = texts[selectedLanguage];
+            document.querySelector('h1').textContent = content.welcome;
+            document.querySelectorAll('h2')[0].textContent = content.version;
+            document.querySelectorAll('h2')[1].textContent = content.modpack;
+            document.querySelector('.container p:nth-of-type(1)').textContent = content.experience;
+            document.querySelector('.container p:nth-of-type(2)').textContent = content.update;
+            document.querySelector('.features h2').textContent = content.featuresTitle;
+            document.querySelector('.features p:nth-of-type(1)').innerHTML = `<strong>${content.feature1.split(': ')[0]}:</strong> ${content.feature1.split(': ')[1]}`;
+            document.querySelector('.features p:nth-of-type(2)').innerHTML = `<strong>${content.feature2.split(': ')[0]}:</strong> ${content.feature2.split(': ')[1]}`;
+            document.querySelector('.features p:nth-of-type(3)').innerHTML = `<strong>${content.feature3.split(': ')[0]}:</strong> ${content.feature3.split(': ')[1]}`;
+            document.querySelector('.news h2').textContent = content.newsTitle;
+            document.querySelector('.news p').textContent = content.newsContent;
+            document.querySelector('h2:nth-of-type(3)').textContent = content.joinUs;
+            document.querySelector('.container p:nth-of-type(3)').innerHTML = `<strong>${content.serverIP.split(': ')[0]}:</strong> ${content.serverIP.split(': ')[1]}`;
+            document.querySelector('.button').textContent = content.joinDiscord;
+        });
+    </script>
 </body>
 </html>
-
-
